@@ -1,11 +1,18 @@
 import openai.OpenAI;
 
+#if js
+@:jsRequire("dotenv")
+extern class Dotenv {
+    public static function config():Void;
+}
+#end
 class Main{
 
     
 
     public static function main(){
 
+        Dotenv.config();
         trace("Hello World");
       
 

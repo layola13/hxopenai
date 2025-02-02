@@ -29,13 +29,15 @@ class Client {
 	}
 }
 $hx_exports["Client"] = Client;
+var Dotenv = require("dotenv");
 class Main {
 	static main() {
-		console.log("src/Main.hx:9:","Hello World");
+		Dotenv.config();
+		console.log("src/Main.hx:16:","Hello World");
 		let client = new Client();
 		client.processPrompt("Hello World,who are you?").then(function(response) {
-			console.log("src/Main.hx:17:","-------------");
-			console.log("src/Main.hx:18:",response);
+			console.log("src/Main.hx:24:","-------------");
+			console.log("src/Main.hx:25:",response);
 		});
 	}
 }

@@ -6,7 +6,6 @@
 --library hxnodejs
 --library openai
 
---library dotenv
 --debug
 
 -D no-deprecation-warnings
